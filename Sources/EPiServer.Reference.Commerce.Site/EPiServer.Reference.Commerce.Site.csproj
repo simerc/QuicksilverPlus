@@ -515,6 +515,9 @@
     <Compile Include="Features\Global\ProductRegistration\ViewModels\ProductRegistrationViewModel.cs" />
     <Compile Include="Features\Global\Profile\ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="Features\Global\ResetPassword\ViewModels\ResetPasswordMailPageViewModel.cs" />
+    <Compile Include="Features\Global\Shared\Blocks\QuicksilverBlock.cs" />
+    <Compile Include="Features\Global\Shared\Interfaces\ISearchable.cs" />
+    <Compile Include="Features\Global\Shared\Pages\QuicksilverPage.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\CountryRegionViewModel.cs" />
     <Compile Include="Features\Global\ErrorHandling\Controllers\ErrorHandlingController.cs" />
     <Compile Include="Features\Global\ErrorHandling\ViewModels\ErrorViewModel.cs" />
@@ -534,6 +537,8 @@
     <Compile Include="Features\Global\ResetPassword\Controllers\ResetPasswordController.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\CountryViewModel.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\PageViewModel.cs" />
+    <Compile Include="Features\Global\Standard\Blocks\StandardBlock.cs" />
+    <Compile Include="Features\Global\Standard\Pages\StandardPage.cs" />
     <Compile Include="Features\Global\Start\Models\PromotionViewModel.cs" />
     <Compile Include="Features\Global\Start\Models\StartPageViewModel.cs" />
     <Compile Include="Infrastructure\Attributes\AllowDBWriteAttribute.cs" />
@@ -1010,7 +1015,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Global\AsyncControllers\" />
+    <Folder Include="Features\Global\Standard\Controllers\" />
     <Folder Include="Features\QuicksilverPlus\" />
+    <Folder Include="Views\Global\Standard\" />
     <Folder Include="Views\Global\TestAsync\" />
     <Folder Include="Views\QuicksilverPlus\" />
   </ItemGroup>
