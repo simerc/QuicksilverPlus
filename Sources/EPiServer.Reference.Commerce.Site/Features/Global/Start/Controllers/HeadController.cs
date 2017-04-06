@@ -1,8 +1,10 @@
 ﻿using System.Web.Mvc;
+using System.Web.Optimization;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
 using EPiServer.Reference.Commerce.Site.Features.Global.Start.Extensions;
 using EPiServer.Reference.Commerce.Site.Features.Global.Start.Pages;
+using EPiServer.Web;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
 

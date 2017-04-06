@@ -587,6 +587,7 @@
     <Compile Include="Features\Global\Shared\Services\ControllerExceptionHandler.cs" />
     <Compile Include="Features\Global\ResetPassword\Controllers\ResetPasswordController.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\CountryViewModel.cs" />
+    <Compile Include="Features\Global\Shared\ViewModels\LayoutModel.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\PageViewModel.cs" />
     <Compile Include="Features\Global\Standard\Blocks\StandardBlock.cs" />
     <Compile Include="Features\Global\Standard\Controllers\StandardPageController.cs" />
@@ -598,6 +599,8 @@
     <Compile Include="Features\QuicksilverPlus\Shared\Blocks\QuicksilverPlusBlock.cs" />
     <Compile Include="Features\QuicksilverPlus\Shared\Pages\QuicksilverPlusPage.cs" />
     <Compile Include="Features\QuicksilverPlus\Start\Pages\QuicksilverStartPage.cs" />
+    <Compile Include="Infrastructure\ActionFilters\IGlobalFilter.cs" />
+    <Compile Include="Infrastructure\ActionFilters\PageContextAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\AllowDBWriteAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\ReadOnlyFilter.cs" />
     <Compile Include="Infrastructure\Business\SiteOrderGroupCalculator.cs" />
@@ -708,6 +711,7 @@
     <Compile Include="Infrastructure\Facades\SearchFacade.cs" />
     <Compile Include="Infrastructure\Facades\UrlAuthorizationFacade.cs" />
     <Compile Include="Features\Global\Shared\Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\GlobalFilterInit.cs" />
     <Compile Include="Infrastructure\ImportSiteContent.cs" />
     <Compile Include="Features\Global\Cart\ViewModels\MiniCartViewModel.cs" />
     <Compile Include="Features\Global\Checkout\Controllers\CheckoutController.cs" />
@@ -730,9 +734,11 @@
     <Compile Include="Infrastructure\Indexing\IndexingHelper.cs" />
     <Compile Include="Infrastructure\Indexing\SearchDocumentController.cs" />
     <Compile Include="Features\Global\Shared\ModelBinders\DecimalModelBinder.cs" />
+    <Compile Include="Infrastructure\IPageViewContextFactory.cs" />
     <Compile Include="Infrastructure\Owin\Startup.cs" />
     <Compile Include="Infrastructure\Descriptors\FashionProductUIDescriptor.cs" />
     <Compile Include="Infrastructure\CustomCurrencySiteContext.cs" />
+    <Compile Include="Infrastructure\PageViewContextFactory.cs" />
     <Compile Include="Infrastructure\QuicksilverViewEngine.cs" />
     <Compile Include="Infrastructure\SiteInitialization.cs" />
     <Compile Include="Features\Global\Cart\Controllers\CartController.cs" />
