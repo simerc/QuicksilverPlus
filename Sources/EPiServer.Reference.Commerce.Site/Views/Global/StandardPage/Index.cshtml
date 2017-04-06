@@ -1,0 +1,16 @@
+﻿@using EPiServer.Reference.Commerce.Site.Features.Global.Shared.ViewModels
+@using EPiServer.Reference.Commerce.Site.Features.Global.Standard.Pages
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<StandardPage>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <b>[@Model.CurrentPage.GetType().ToString()]</b><br /><br />
+            <ul>
+                <li>@Model.CurrentPage.Title</li>
+                <li>@Model.CurrentPage.MainBody</li>
+            </ul>
+        </div>
+    </div>
+</div>

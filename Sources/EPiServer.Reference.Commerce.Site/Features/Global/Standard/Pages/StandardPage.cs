@@ -10,6 +10,7 @@ using EPiServer.Reference.Commerce.Site.Features.Global.Cart.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.ResetPassword.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.Search.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.Shared.Pages;
+using EPiServer.Web;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Global.Standard.Pages
 {
@@ -19,10 +20,21 @@ namespace EPiServer.Reference.Commerce.Site.Features.Global.Standard.Pages
     {
         [CultureSpecific]
         [Display(
+               Name = "Main body",
+               GroupName = SystemTabNames.Content,
+               Order = 10)]
+        [UIHint(UIHint.Textarea)]
+        public virtual string MainBody { get; set; }
+
+        [CultureSpecific]
+        [Display(
                Name = "Content Area",
                Description = "content area for blocks",
                GroupName = SystemTabNames.Content,
-               Order = 1)]
+               Order = 20)]
         public virtual ContentArea MainContentArea { get; set; }
+
+        //Market specific properties
+        public virtual string MarketSpecificProperty { get; set; }
     }
 }

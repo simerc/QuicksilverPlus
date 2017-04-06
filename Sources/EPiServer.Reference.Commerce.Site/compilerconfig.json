@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "Styles/footer.css",
+    "inputFile": "Styles/footer.less"
+  },
+  {
+    "outputFile": "Styles/main.css",
+    "inputFile": "Styles/main.less"
+  },
+  {
+    "outputFile": "Styles/style.css",
+    "inputFile": "Styles/style.less"
+  },
+  {
+    "outputFile": "Assets/Global/Styles/style.css",
+    "inputFile": "Assets/Global/Styles/style.less"
+  },
+  {
+    "outputFile": "Assets/QuicksilverPlus/Styles/style.css",
+    "inputFile": "Assets/QuicksilverPlus/Styles/style.less"
+  }
+]

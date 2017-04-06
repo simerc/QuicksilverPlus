@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,29 +18,36 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
 
         public QuicksilverViewEngine() : base()
         {
+            var globalTheme = ConfigurationManager.AppSettings["GlobalViewLocation"];
             _loader = ServiceLocator.Current.GetInstance<IContentLoader>();
             _siteThemes = new Dictionary<int, string>();
 
-            ViewLocationFormats = new string[4]
+            ViewLocationFormats = new string[6]
             {
                 "~/Views%1/{1}/{0}.cshtml",
                 "~/Views%1/Shared/{0}.cshtml",
+                "~/Views/" + globalTheme + "/{1}/{0}.cshtml",
+                "~/Views/" + globalTheme + "/Shared/{0}.cshtml",
                 "~/Views/{1}/{0}.cshtml",
                 "~/Views/Shared/{0}.cshtml"
 
             };
-            MasterLocationFormats = new string[4]
+            MasterLocationFormats = new string[6]
             {
                 "~/Views%1/{1}/{0}.cshtml",
                 "~/Views%1/Shared/{0}.cshtml",
+                "~/Views/" + globalTheme + "/{1}/{0}.cshtml",
+                "~/Views/" + globalTheme + "/Shared/{0}.cshtml",
                 "~/Views/{1}/{0}.cshtml",
                 "~/Views/Shared/{0}.cshtml"
             };
 
-            PartialViewLocationFormats = new string[4]
+            PartialViewLocationFormats = new string[6]
             {
                 "~/Views%1/{1}/{0}.cshtml",
                 "~/Views%1/Shared/{0}.cshtml",
+                "~/Views/" + globalTheme + "/{1}/{0}.cshtml",
+                "~/Views/" + globalTheme + "/Shared/{0}.cshtml",
                 "~/Views/{1}/{0}.cshtml",
                 "~/Views/Shared/{0}.cshtml"
             };

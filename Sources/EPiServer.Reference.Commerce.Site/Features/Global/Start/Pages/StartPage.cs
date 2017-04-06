@@ -9,11 +9,17 @@ using EPiServer.Reference.Commerce.Site.Features.Global.AddressBook.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.Cart.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.ResetPassword.Pages;
 using EPiServer.Reference.Commerce.Site.Features.Global.Search.Pages;
+using EPiServer.Reference.Commerce.Site.Features.Global.Standard.Pages;
+using EPiServer.Reference.Commerce.Site.Features.QuicksilverPlus.Quicksilver.Pages;
+using EPiServer.Reference.Commerce.Site.Features.QuicksilverPlus.Shared.Pages;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Global.Start.Pages
 {
     [ContentType(DisplayName = "Start page", GUID = "452d1812-7385-42c3-8073-c1b7481e7b20", 
-        Description = "", AvailableInEditMode = true)]
+        Description = "", AvailableInEditMode = false)]
+    [AvailableContentTypes(
+        Exclude = new [] { typeof(QuicksilverPlusPage)},
+        Include = new [] {typeof(StandardPage) })]
     public class StartPage : PageData
     {
         [CultureSpecific]
