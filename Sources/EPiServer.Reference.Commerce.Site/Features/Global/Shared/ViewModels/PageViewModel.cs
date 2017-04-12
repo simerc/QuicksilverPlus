@@ -2,9 +2,9 @@
 
 namespace EPiServer.Reference.Commerce.Site.Features.Global.Shared.ViewModels
 {
-    public class PageViewModel<T> where T : PageData
+    public class PageViewModel<T> : BaseViewModel 
+        where T : PageData
     {
         public T CurrentPage { get; set; }
-        public LayoutModel LayoutModel { get; set; }
     }
 }

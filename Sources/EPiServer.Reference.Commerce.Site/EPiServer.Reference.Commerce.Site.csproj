@@ -14,7 +14,7 @@
     <RootNamespace>EPiServer.Reference.Commerce.Site</RootNamespace>
     <AssemblyName>EPiServer.Reference.Commerce.Site</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort>44301</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
@@ -52,6 +52,10 @@
     </Reference>
     <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AuthorizeNet.1.8.10\lib\AuthorizeNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Castle.Core">
@@ -569,6 +573,7 @@
     <Compile Include="Features\Global\Shared\Blocks\QuicksilverBlock.cs" />
     <Compile Include="Features\Global\Shared\Interfaces\ISearchable.cs" />
     <Compile Include="Features\Global\Shared\Pages\QuicksilverPage.cs" />
+    <Compile Include="Features\Global\Shared\ViewModels\BaseViewModel.cs" />
     <Compile Include="Features\Global\Shared\ViewModels\CountryRegionViewModel.cs" />
     <Compile Include="Features\Global\ErrorHandling\Controllers\ErrorHandlingController.cs" />
     <Compile Include="Features\Global\ErrorHandling\ViewModels\ErrorViewModel.cs" />
@@ -594,15 +599,16 @@
     <Compile Include="Features\Global\Standard\Pages\StandardPage.cs" />
     <Compile Include="Features\Global\Start\Models\PromotionViewModel.cs" />
     <Compile Include="Features\Global\Start\Models\StartPageViewModel.cs" />
-    <Compile Include="Features\QuicksilverPlus\Quicksilver\Blocks\QuicksilverPlusSpecificBlock.cs" />
-    <Compile Include="Features\QuicksilverPlus\Quicksilver\Pages\QuicksilverSpecificPage.cs" />
-    <Compile Include="Features\QuicksilverPlus\Shared\Blocks\QuicksilverPlusBlock.cs" />
-    <Compile Include="Features\QuicksilverPlus\Shared\Pages\QuicksilverPlusPage.cs" />
-    <Compile Include="Features\QuicksilverPlus\Start\Pages\QuicksilverStartPage.cs" />
+    <Compile Include="Features\[Brand Name]\Quicksilver\Blocks\QuicksilverPlusSpecificBlock.cs" />
+    <Compile Include="Features\[Brand Name]\Quicksilver\Pages\QuicksilverSpecificPage.cs" />
+    <Compile Include="Features\[Brand Name]\Shared\Blocks\QuicksilverPlusBlock.cs" />
+    <Compile Include="Features\[Brand Name]\Shared\Pages\QuicksilverPlusPage.cs" />
+    <Compile Include="Features\[Brand Name]\Start\Pages\QuicksilverStartPage.cs" />
     <Compile Include="Infrastructure\ActionFilters\IGlobalFilter.cs" />
     <Compile Include="Infrastructure\ActionFilters\PageContextAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\AllowDBWriteAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\ReadOnlyFilter.cs" />
+    <Compile Include="Infrastructure\Automapper\AutomapperInitialize.cs" />
     <Compile Include="Infrastructure\Business\SiteOrderGroupCalculator.cs" />
     <Compile Include="Infrastructure\Business\SiteOrderFormCalculator.cs" />
     <Compile Include="Infrastructure\Facades\AppContextFacade.cs" />
@@ -943,9 +949,9 @@
     <Content Include="modules\_protected\CMS\web.config" />
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="Views\Global\StandardPage\Index.cshtml" />
-    <Content Include="Views\QuicksilverPlus\StandardPage\Index.cshtml" />
-    <Content Include="Views\QuicksilverPlus\Web.config" />
-    <Content Include="Views\QuicksilverPlus\_viewstart.cshtml" />
+    <Content Include="Views\[Brand Name]\StandardPage\Index.cshtml" />
+    <Content Include="Views\[Brand Name]\Web.config" />
+    <Content Include="Views\[Brand Name]\_viewstart.cshtml" />
     <Content Include="Assets\Global\Styles\Blocks\productlistblock.less" />
     <Content Include="Assets\Global\Styles\bootstrap\.csscomb.json" />
     <Content Include="Assets\Global\Styles\bootstrap\.csslintrc" />
@@ -1339,9 +1345,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Global\AsyncControllers\" />
     <Folder Include="Views\Global\TestAsync\" />
-    <Folder Include="Views\QuicksilverPlus\QuicksilverPage\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1364,11 +1368,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50244</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50244/</IISUrl>
+          <IISUrl>https://quicksilver.cms</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

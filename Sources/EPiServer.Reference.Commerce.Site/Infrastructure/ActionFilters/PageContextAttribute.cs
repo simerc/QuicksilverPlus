@@ -23,7 +23,7 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.ActionFilters
 
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            var siteViewModel = filterContext.Controller.ViewData.Model as PageViewModel<PageData>;
+            var siteViewModel = filterContext.Controller.ViewData.Model as BaseViewModel;
 
             if (siteViewModel == null)
             {

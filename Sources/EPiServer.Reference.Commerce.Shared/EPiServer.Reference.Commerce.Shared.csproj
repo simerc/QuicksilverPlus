@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -35,6 +35,10 @@
   <ItemGroup>
     <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AuthorizeNet.1.8.10\lib\AuthorizeNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Castle.Core">
@@ -244,13 +248,17 @@
     <Compile Include="..\AssemblyVersionAuto.cs">
       <Link>AssemblyVersionAuto.cs</Link>
     </Compile>
+    <Compile Include="AutomapperProfiles\ProductProfile.cs" />
     <Compile Include="GenericCreditCardPaymentGateway.cs" />
     <Compile Include="CatalogIndexer\RestIndexer.cs" />
     <Compile Include="Identity\OwinInitialization.cs" />
     <Compile Include="Identity\SiteUser.cs" />
     <Compile Include="Identity\ChallengeResult.cs" />
     <Compile Include="Identity\ContactIdentityResult.cs" />
+    <Compile Include="Models\ApiProductResult.cs" />
+    <Compile Include="Models\DaysOfWeek.cs" />
     <Compile Include="Models\MailBasePage.cs" />
+    <Compile Include="Models\ProductItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CatalogIndexer\RestSearchDocument.cs" />
     <Compile Include="CatalogIndexer\RestSearchField.cs" />
